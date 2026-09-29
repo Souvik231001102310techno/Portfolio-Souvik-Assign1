@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  font-family: "Inter", sans-serif;
+  color: #f5f4fa;
+  background: #080a17;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #080a17;
+}
+
+body {
+  min-width: 320px;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(124, 92, 255, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(0, 217, 255, 0.05),
+      transparent 25%
+    ),
+    #080a17;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    radial-gradient(
+      rgba(255, 255, 255, 0.18) 1px,
+      transparent 1px
+    );
+  background-size: 35px 35px;
+  opacity: 0.08;
+  animation: stars 20s linear infinite;
+}
+
+::selection {
+  color: white;
+  background: #7c5cff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080a17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#7c5cff, #00d9ff);
+  border-radius: 10px;
+}
+
+@keyframes stars {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(35px);
+  }
+}
